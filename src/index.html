@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unparalleled Scholar - Transform your learning journey with purpose-driven education. Industry-aligned curricula, adaptive learning paths, and global accessibility.">
+    <meta name="keywords" content="education, online learning, e-learning, courses, professional development, skill development, career advancement">
+    <meta name="author" content="Srijan Kumar | Srijanxi Technologies">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unparalleledscholar.com/">
+    <meta property="og:title" content="Unparalleled Scholar | Purpose-Driven Education">
+    <meta property="og:description" content="Transform your learning journey with industry-aligned curricula and adaptive learning paths.">
+    <meta property="og:image" content="../client/img/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://unparalleledscholar.com/">
+    <meta property="twitter:title" content="Unparalleled Scholar | Purpose-Driven Education">
+    <meta property="twitter:description" content="Transform your learning journey with industry-aligned curricula and adaptive learning paths.">
+    <meta property="twitter:image" content="../client/img/logo.png">
+    
+    <title>Unparalleled Scholar | Unlocking Potential Through Purpose-Driven Education</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    
+    <!-- DOMPurify for security -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../client/css/index.css">
+    <link rel="stylesheet" href="../client/css/ui-enhancements.css">
+    
+    <!-- Custom Scripts -->
+    <script src="../client/js/security.js" defer></script>
+    <script src="../client/js/ui-enhancements.js" defer></script>
+    <script src="../client/js/app.js" defer></script>
+    
+    <!-- Smooth scrolling and fade-in animations -->
+    <style>
+        html { scroll-behavior: smooth; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up { animation: fadeInUp 0.6s ease-out; }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .slide-in-left { animation: slideInLeft 0.6s ease-out; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Reading Progress Bar -->
+    <div id="reading-progress"></div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+                <!-- Logo -->
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="#" class="flex items-center space-x-3">
+                        <!-- Logo Image -->
+                        <img src="../client/img/logo.png" alt="Unparalleled Scholar Logo" class="h-10 w-10 object-contain">
+                        <span class="text-xl sm:text-2xl font-extrabold text-indigo-900 tracking-tight">Unparalleled Scholar</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                        <span class="sr-only">Open menu</span>
+                        <!-- Hamburger icon -->
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#about" class="text-base font-medium text-gray-700 hover:text-indigo-600 transition duration-150 ease-in-out relative group">
+                        About
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="#pillars" class="text-base font-medium text-gray-700 hover:text-indigo-600 transition duration-150 ease-in-out relative group">
+                        Platform
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="#testimonials" class="text-base font-medium text-gray-700 hover:text-indigo-600 transition duration-150 ease-in-out relative group">
+                        Testimonials
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="#faq" class="text-base font-medium text-gray-700 hover:text-indigo-600 transition duration-150 ease-in-out relative group">
+                        FAQ
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="/pages/courses.html" class="text-base font-medium text-gray-700 hover:text-indigo-600 transition duration-150 ease-in-out relative group">
+                        Courses
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="/pages/contact.html" class="text-base font-medium text-gray-700 hover:text-indigo-600 transition duration-150 ease-in-out relative group">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition duration-150">About</a>
+                    <a href="#pillars" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition duration-150">Platform</a>
+                    <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition duration-150">Testimonials</a>
+                    <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition duration-150">FAQ</a>
+                    <a href="/pages/courses.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition duration-150">Courses</a>
+                    <a href="/pages/contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition duration-150">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Section 
+    <section class="w-full bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div class="max-w-7xl mx-auto">
+            <img src="../client/img/Banner.png" alt="Unparalleled Scholar Banner" class="w-full h-auto object-cover" style="max-height: 400px;">
+        </div>
+    </section> 
+    --->
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="relative pt-16 pb-24 lg:pt-32 lg:pb-40 bg-indigo-900 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight" data-aos="fade-down" data-aos-duration="1000">
+                        The Future of Learning, Today.
+                    </h1>
+                    <p class="mt-3 max-w-2xl mx-auto text-xl text-teal-400 sm:mt-5 sm:text-2xl font-semibold leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                        Unlocking Potential Through Purpose-Driven Education.
+                    </p>
+                    <div class="mt-10 max-w-md mx-auto sm:flex sm:justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                            <a href="#cta" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-indigo-900 bg-white hover:bg-gray-100 md:py-4 md:text-lg md:px-10 transition duration-300 transform hover:scale-105">
+                                Start Your Transformation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Decorative background element for the hero section -->
+            <div class="absolute inset-0 opacity-10">
+                <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="currentColor" d="M0,192L80,186.7C160,181,320,171,480,165.3C640,160,800,160,960,160C1120,160,1280,160,1360,160L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- 2. About Unparalleled Scholar -->
+        <section id="about" class="py-20 sm:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                    <div class="lg:col-span-6" data-aos="fade-right">
+                        <h2 class="text-base text-teal-500 font-semibold tracking-wide uppercase">
+                            Our Foundation
+                        </h2>
+                        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                            Pioneering Purpose-Driven Education
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                            At Unparalleled Scholar, we are pioneering an education platform designed to transform learning through <span class="font-semibold text-indigo-900">innovation, accessibility, and purpose-driven solutions</span>.
+                        </p>
+                    </div>
+                    <div class="mt-10 lg:mt-0 lg:col-span-6" data-aos="fade-left">
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Our platform seamlessly integrates traditional academics with evolving industry demands, delivering personalized, data-driven curricula to empower students, educators, and institutions. With scalable digital technology, we enable excellence and future-ready skills development across the globe.
+                        </p>
+                        <div class="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2">
+                            <!-- Vision Card -->
+                            <div id="vision" class="p-6 bg-gradient-to-br from-indigo-50 to-teal-50 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 hover:-translate-y-1" data-aos="zoom-in" data-aos-delay="100">
+                                <h3 class="text-xl font-bold text-indigo-900 flex items-center">
+                                    <i class="uil uil-eye text-teal-500 text-3xl mr-3"></i>
+                                    Our Vision
+                                </h3>
+                                <p class="mt-3 text-gray-700 leading-relaxed">
+                                    To be the global education platform that leads the transformation toward a smarter, more capable world.
+                                </p>
+                            </div>
+                            <!-- Mission Card -->
+                            <div class="p-6 bg-gradient-to-br from-indigo-50 to-teal-50 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 hover:-translate-y-1">
+                                <h3 class="text-xl font-bold text-indigo-900 flex items-center">
+                                    <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    Our Mission
+                                </h3>
+                                <p class="mt-3 text-gray-700 leading-relaxed">
+                                    To build accessible and innovative education experiences that empower individuals to succeed in a dynamic knowledge economy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 3. Core Platform Pillars -->
+        <section id="pillars" class="py-20 sm:py-28 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-base text-teal-500 font-semibold tracking-wide uppercase">
+                        The Unparalleled Difference
+                    </h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        A Platform Built for the Future-Ready Student
+                    </p>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        Discover the core pillars that make our platform transformative and accessible to students worldwide.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Pillar 1: Future-Ready Curriculum -->
+                    <div class="pt-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flow-root bg-white rounded-xl shadow-lg p-8 h-full transform hover:scale-[1.05] hover:-translate-y-2 transition duration-300 ease-in-out">
+                            <div class="h-full">
+                                <div class="mb-4 inline-flex p-4 rounded-full bg-teal-100 text-teal-600 text-2xl">
+                                    <!-- Icon: Code/Development -->
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-indigo-900">Industry-Aligned Curricula</h3>
+                                <p class="mt-3 text-base text-gray-600 leading-relaxed">
+                                    Seamlessly integrating rigorous academic standards with emerging industry skill requirements, ensuring our scholars are future-ready from day one.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2: Personalized & Data-Driven -->
+                    <div class="pt-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flow-root bg-white rounded-xl shadow-lg p-8 h-full transform hover:scale-[1.05] hover:-translate-y-2 transition duration-300 ease-in-out">
+                            <div class="h-full">
+                                <div class="mb-4 inline-flex p-4 rounded-full bg-teal-100 text-teal-600">
+                                    <!-- Icon: Chart/Data -->
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 8v8m-4-5v5m-4-2v2m-2-5a2 2 0 114 0m-4 0a2 2 0 10-4 0v3a2 2 0 104 0V8zM8 8a2 2 0 114 0m-4 0a2 2 0 10-4 0v3a2 2 0 104 0V8zM12 8a2 2 0 114 0m-4 0a2 2 0 10-4 0v3a2 2 0 104 0V8zM16 8a2 2 0 114 0m-4 0a2 2 0 10-4 0v3a2 2 0 104 0V8zM18 10h-2M6 10h-2" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-indigo-900">Adaptive Learning Paths</h3>
+                                <p class="mt-3 text-base text-gray-600 leading-relaxed">
+                                    Leveraging data and AI to personalize every student's journey, optimizing engagement and ensuring mastery of foundational and advanced concepts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3: Global Accessibility -->
+                    <div class="pt-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flow-root bg-white rounded-xl shadow-lg p-8 h-full transform hover:scale-[1.05] hover:-translate-y-2 transition duration-300 ease-in-out">
+                            <div class="h-full">
+                                <div class="mb-4 inline-flex p-4 rounded-full bg-teal-100 text-teal-600">
+                                    <!-- Icon: Globe/World -->
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3h4m-4 7h4m-7 1.5H7.5M10.5 10.5h-3" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 11.006A6.993 6.993 0 0115 17h2a2 2 0 002-2v-1a2 2 0 012-2h-3m-6 3l2-2-2-2" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-indigo-900">Scalable Digital Platform</h3>
+                                <p class="mt-3 text-base text-gray-600 leading-relaxed">
+                                    Delivering high-quality education experiences regardless of location or device, fulfilling our mission of building a truly accessible knowledge economy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Testimonials Section -->
+        <section id="testimonials" class="py-20 sm:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-teal-500 font-semibold tracking-wide uppercase">
+                        Success Stories
+                    </h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        Transforming Lives Through Education
+                    </p>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        Hear from our scholars who have achieved remarkable success through our platform.
+                    </p>
+                </div>
+
+                <!-- Testimonials Grid -->
+                <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-gradient-to-br from-indigo-50 to-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out" data-aos="fade-up">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="h-16 w-16 rounded-full bg-gradient-to-r from-indigo-500 to-teal-500 flex items-center justify-center text-white text-2xl font-bold">
+                                    SK
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-gray-900">Sanjay Kumar</h4>
+                                <p class="text-sm text-gray-600">Full-Stack Developer</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Star Rating -->
+                        <div class="flex mb-4">
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+
+                        <p class="text-gray-700 leading-relaxed mb-4 italic">
+                            "Unparalleled Scholar transformed my career trajectory. The industry-aligned curriculum and personalized learning path helped me transition from a support role to a full-stack developer in just 8 months!"
+                        </p>
+
+                        <!-- Before/After Badge -->
+                        <div class="flex items-center space-x-2 text-sm">
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full font-semibold">Before: Support Tech</span>
+                            <svg class="h-4 w-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full font-semibold">After: Developer</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-gradient-to-br from-teal-50 to-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="h-16 w-16 rounded-full bg-gradient-to-r from-teal-500 to-indigo-500 flex items-center justify-center text-white text-2xl font-bold">
+                                    PR
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-gray-900">Priya Reddy</h4>
+                                <p class="text-sm text-gray-600">Data Scientist</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Star Rating -->
+                        <div class="flex mb-4">
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+
+                        <p class="text-gray-700 leading-relaxed mb-4 italic">
+                            "The data-driven approach and adaptive learning paths made complex concepts easy to grasp. I went from having zero programming knowledge to landing my dream job in data science. Forever grateful!"
+                        </p>
+
+                        <!-- Before/After Badge -->
+                        <div class="flex items-center space-x-2 text-sm">
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full font-semibold">Before: Marketing</span>
+                            <svg class="h-4 w-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full font-semibold">After: Data Scientist</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="h-16 w-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl font-bold">
+                                    AM
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-gray-900">Arjun Mehta</h4>
+                                <p class="text-sm text-gray-600">Product Manager</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Star Rating -->
+                        <div class="flex mb-4">
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+
+                        <p class="text-gray-700 leading-relaxed mb-4 italic">
+                            "The business and technical courses combined gave me the perfect foundation to transition into product management. The real-world projects and mentorship were invaluable!"
+                        </p>
+
+                        <!-- Before/After Badge -->
+                        <div class="flex items-center space-x-2 text-sm">
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full font-semibold">Before: Sales Rep</span>
+                            <svg class="h-4 w-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full font-semibold">After: Product Manager</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="mt-20 grid grid-cols-2 gap-6 md:grid-cols-4">
+                    <div class="text-center" data-aos="fade-up">
+                        <div class="text-4xl font-extrabold text-indigo-900">5,000+</div>
+                        <div class="mt-2 text-sm font-medium text-gray-600">Success Stories</div>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-4xl font-extrabold text-teal-600">4.9/5</div>
+                        <div class="mt-2 text-sm font-medium text-gray-600">Average Rating</div>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-4xl font-extrabold text-indigo-900">95%</div>
+                        <div class="mt-2 text-sm font-medium text-gray-600">Career Advancement</div>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-4xl font-extrabold text-teal-600">85%</div>
+                        <div class="mt-2 text-sm font-medium text-gray-600">Salary Increase</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 sm:py-28 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-base text-teal-500 font-semibold tracking-wide uppercase">
+                        Got Questions?
+                    </h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        Frequently Asked Questions
+                    </p>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                        Find answers to common questions about our platform and courses.
+                    </p>
+                </div>
+
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-gray-900 pr-4">What makes Unparalleled Scholar different from other platforms?</span>
+                            <svg class="faq-icon w-6 h-6 text-indigo-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                                We offer industry-aligned curricula with adaptive learning paths powered by AI and data analytics. Our platform seamlessly integrates traditional academics with emerging industry demands, ensuring students are future-ready from day one.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-gray-900 pr-4">How do I enroll in a course?</span>
+                            <svg class="faq-icon w-6 h-6 text-indigo-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                                Browse our courses page, select the course that interests you, and click "Enroll Now." You'll be guided through a simple registration process. Once enrolled, you'll get immediate access to course materials and resources.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-gray-900 pr-4">Are the courses self-paced or scheduled?</span>
+                            <svg class="faq-icon w-6 h-6 text-indigo-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                                We offer both options! Most of our courses are self-paced, allowing you to learn at your convenience. We also offer scheduled live sessions with instructors for interactive learning experiences and real-time Q&A.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-gray-900 pr-4">Will I receive a certificate upon completion?</span>
+                            <svg class="faq-icon w-6 h-6 text-indigo-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                                Yes! Upon successful completion of any course, you'll receive a verified certificate that you can share on LinkedIn, add to your resume, or showcase in your professional portfolio.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-gray-900 pr-4">What kind of support is available for students?</span>
+                            <svg class="faq-icon w-6 h-6 text-indigo-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                                We provide comprehensive support including instructor Q&A, discussion forums, email support, and live chat assistance. You'll also have access to our community of learners and mentors who can help guide your journey.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
+                            <span class="text-lg font-semibold text-gray-900 pr-4">Can I access courses on mobile devices?</span>
+                            <svg class="faq-icon w-6 h-6 text-indigo-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                                Absolutely! Our platform is fully responsive and optimized for mobile devices, tablets, and desktops. Learn anytime, anywhere with seamless access across all your devices.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Still have questions CTA -->
+                <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-gray-600 mb-4">Still have questions?</p>
+                    <a href="/pages/contact.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                        Contact Us
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CTA Section -->
+        <section id="cta" class="bg-gradient-to-r from-teal-500 to-teal-600 py-20 relative overflow-hidden">
+            <!-- Animated background pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120">
+                    <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl" data-aos="zoom-in">
+                    Ready to Transform Your Educational Offering?
+                </h2>
+                <p class="mt-4 text-xl text-teal-100 max-w-3xl mx-auto leading-relaxed" data-aos="zoom-in" data-aos-delay="100">
+                    Join the movement and partner with Unparalleled Scholar to cultivate excellence and future-ready skills in your community.
+                </p>
+                <div class="mt-8" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="/pages/contact.html" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-lg shadow-2xl text-teal-600 bg-white hover:bg-indigo-50 transition duration-300 transform hover:scale-110 hover:shadow-3xl">
+                        Get Started Today →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 5. Footer -->
+    <footer class="bg-indigo-900 mt-0 py-16 border-t border-indigo-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Logo and Description -->
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center space-x-3">
+                        <img src="../client/img/logo.png" alt="Unparalleled Scholar Logo" class="h-10 w-10 object-contain brightness-110">
+                        <span class="text-xl font-bold text-white tracking-tight">Unparalleled Scholar</span>
+                    </a>
+                    <p class="text-sm text-indigo-300 leading-relaxed">
+                        Pioneering purpose-driven education through innovation, accessibility, and future-ready solutions.
+                    </p>
+                </div>
+
+                <!-- Newsletter Section -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-white">Newsletter</h3>
+                    <p class="text-sm text-indigo-300">
+                        Stay updated with our latest trends and educational insights.
+                    </p>
+                    <form id="newsletter-form" class="flex gap-2">
+                        <input 
+                            type="email" 
+                            placeholder="Enter email address" 
+                            required
+                            class="flex-1 px-4 py-2.5 rounded-lg bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-400 text-sm"
+                        >
+                        <button 
+                            type="submit"
+                            aria-label="Subscribe to newsletter"
+                            class="px-6 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:from-orange-600 hover:to-orange-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                        >
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Us Section -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-white">Contact Us</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <div>
+                                <span class="font-semibold text-white">Address:</span>
+                                <p class="text-indigo-300">Global Digital Platform</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-teal-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <div>
+                                <span class="font-semibold text-white">Email:</span>
+                                <a href="mailto:scholarxx7@gmail.com" class="text-indigo-300 hover:text-teal-400 transition">scholarxx7@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6 mb-8 pb-8 border-b border-indigo-800">
+                <a href="https://www.linkedin.com/company/unparalleled-scholar/" target="_blank" rel="noopener noreferrer" 
+                   class="text-indigo-300 hover:text-teal-400 transition duration-300" aria-label="LinkedIn">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.364-4.225-3.078-4.225 0v5.604h-3v-11h3v1.765c1.396-2.586 7.225-2.535 7.225 2.535v6.7z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="text-indigo-300 hover:text-teal-400 transition duration-300" aria-label="Twitter">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="text-indigo-300 hover:text-teal-400 transition duration-300" aria-label="Instagram">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="text-center">
+                <p class="text-sm text-indigo-300">
+                    Copyright ©2025 All rights reserved | Unparalleled Scholar built by <a href="https://srijanxi.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-teal-400 font-semibold hover:text-teal-300 transition">Srijan Kumar</a> | 
+                    <a href="https://www.linkedin.com/company/srijanxi-technologies/" target="_blank" rel="noopener noreferrer" class="text-teal-400 font-semibold hover:text-teal-300 transition">Srijanxi Technologies</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="uil uil-arrow-up"></i>
+    </button>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+
+</body>
+</html>

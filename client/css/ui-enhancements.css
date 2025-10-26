@@ -1,0 +1,296 @@
+/* UI/UX Enhancement Styles */
+/* Developed by Srijanxi Technologies */
+/* Project: US.V1 - Unparalleled Scholar */
+
+/* ========================================
+   1. BREADCRUMB NAVIGATION
+   ======================================== */
+#breadcrumb {
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#breadcrumb a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#breadcrumb a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+#breadcrumb .separator {
+  color: #94a3b8;
+  margin: 0 0.25rem;
+}
+
+#breadcrumb .current {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* ========================================
+   2. READING PROGRESS BAR
+   ======================================== */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  z-index: 9999;
+  transition: width 0.2s ease;
+}
+
+/* ========================================
+   3. BACK TO TOP BUTTON
+   ======================================== */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+/* ========================================
+   4. LOADING SPINNER
+   ======================================== */
+.loading-spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease;
+}
+
+.loading-spinner {
+  text-align: center;
+}
+
+.spinner-ring {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+.spinner-text {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ========================================
+   5. PARALLAX ELEMENTS
+   ======================================== */
+[data-parallax] {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+/* ========================================
+   6. TYPING ANIMATION
+   ======================================== */
+[data-typing] {
+  display: inline-block;
+  position: relative;
+}
+
+[data-typing]::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* ========================================
+   7. SCROLL REVEAL ANIMATIONS
+   ======================================== */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal="fade"] {
+  transform: none;
+}
+
+[data-reveal="slide-left"] {
+  transform: translateX(-30px);
+}
+
+[data-reveal="slide-left"].revealed {
+  transform: translateX(0);
+}
+
+[data-reveal="slide-right"] {
+  transform: translateX(30px);
+}
+
+[data-reveal="slide-right"].revealed {
+  transform: translateX(0);
+}
+
+[data-reveal="zoom"] {
+  transform: scale(0.9);
+}
+
+[data-reveal="zoom"].revealed {
+  transform: scale(1);
+}
+
+/* ========================================
+   8. PAGE TRANSITIONS
+   ======================================== */
+body {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* ========================================
+   9. PRINT OPTIMIZATION
+   ======================================== */
+@media print {
+  body.printing {
+    background: white !important;
+  }
+
+  body.printing #back-to-top,
+  body.printing #reading-progress,
+  body.printing nav,
+  body.printing footer,
+  body.printing .no-print {
+    display: none !important;
+  }
+
+  body.printing * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body.printing a {
+    text-decoration: underline !important;
+  }
+
+  body.printing a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}
+
+/* ========================================
+   10. FADE IN ANIMATION
+   ======================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   11. SMOOTH TRANSITIONS
+   ======================================== */
+* {
+  scroll-behavior: smooth;
+}
+
+/* ========================================
+   12. ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* ========================================
+   13. RESPONSIVE ADJUSTMENTS
+   ======================================== */
+@media (max-width: 768px) {
+  #back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  #breadcrumb {
+    font-size: 0.8rem;
+  }
+}

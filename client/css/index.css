@@ -1,0 +1,20 @@
+/* Global styles for Unparalleled Scholar */
+
+/* Ensure Inter font is used and set a subtle background for contrast */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f9fc; /* Light background for contrast */
+}
+
+/* Animation delay utilities */
+.animation-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}

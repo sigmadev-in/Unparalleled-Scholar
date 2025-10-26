@@ -294,5 +294,5 @@ The `docs/` folder contains detailed technical documentation:
 ---
 
 **Built with ❤️ by Srijan Kumar | Srijanxi Technologies**  
-**© 2024 Unparalleled Scholar. All rights reserved.**
+**© Unparalleled Scholar. All rights reserved.**
 

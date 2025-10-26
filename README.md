@@ -11,6 +11,8 @@
 [![Version](https://img.shields.io/badge/Version-1.0.0-blue)]()
 [![License](https://img.shields.io/badge/License-All_Rights_Reserved-red)]()
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Unparalleled%20Scholar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/unparalleled-scholar/)
+
 **Project Code Name:** `US.V1`
 
 ---
